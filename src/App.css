@@ -1,0 +1,324 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+/* border-color*/
+.App{
+  width: 100%;
+  display: flexbox;
+  flex-direction: row;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.37)
+}
+.header{
+ border-style: double;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(51, 45, 51, 0.63);
+  font-size: 4vw;
+  margin-bottom: 0%;
+  height: 20%;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 3%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+
+
+  
+}
+
+.header h1{
+  text-align: center;
+  color: rgb(179, 140, 216);
+
+}
+
+
+
+.Hairstyles{
+
+  background-color: rgba(51, 45, 51, 0.63);
+  padding-bottom: 0%;
+  margin-bottom: 0;
+
+
+ }
+
+ .Hairstyles video{
+  display: flex;
+  width: 100%;
+ }
+
+ .Hairstyles h2{
+  color: rgb(59, 55, 63);
+  background-color: rgb(179, 140, 216);
+  padding: 0;
+  margin: 0;
+ }
+
+
+
+
+.Services{
+
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 7%;
+  border-bottom-right-radius: 7%;
+  border-top-style: outset;
+  border-bottom-style: outset;
+  border-width: 5px;
+  border-color: rgb(22, 22, 22);
+  background-color: rgba(51, 45, 51, 0.301);
+  padding-bottom: 5%;
+  margin-top: 0%;
+  padding-top: 0%;
+
+}
+.Services h2{
+  color: rgb(59, 55, 63);
+  border-bottom-style: outset;
+  width: fit-content;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding-top: 0%;
+  margin: 0;
+  font-size: 40px;
+  margin-bottom: 10%;
+
+  
+}
+
+
+
+#servList{
+  z-index: -1;
+  position: relative;
+  list-style-type: none;
+  font-size: 24px;
+  font-family: 'Space Grotesk', sans-serif;
+  height: 100%;
+  width: 45%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 5%;
+  /*padding-right: 25vw;
+  padding-left: 100px;*/
+
+  background-color: rgba(179, 140, 216, 0.822);
+  border-top-right-radius: 2%;
+  border-bottom-right-radius: 2%;
+
+}
+
+#servList li{
+  width: 60vw;
+  font-size: larger;
+  font-style: italic;
+  /*background-color: rgba(250, 255, 250, 0.068)*/
+
+
+
+
+}
+/* adding speces to each li*/
+#li1{
+  margin-left: 35%;
+}
+#li2{
+  margin-left: 45%;
+}
+
+
+
+
+@media only screen and (min-width: 1724px){
+  #servList{
+    font-size: 22px;
+    padding-right: 20vw;
+  }
+}
+@media only screen and (max-width: 1724px) {
+  #servList{
+    font-size: 22px;
+    padding-right: 20vw;
+  }
+}
+@media only screen and (max-width: 1294px) {
+  #servList{
+    padding-right: 20vw;
+  }
+}
+
+@media only screen and (max-width: 1078px) {
+  #servList{
+    padding-right: 18vw;
+    font-size: 20px;
+  
+  }
+}
+@media only screen and (max-width: 955px) {
+  #servList{
+    padding-left: 50px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 800px){
+#servList{
+  position: relative;
+  float: right;
+  background-color: rgba(137, 43, 226, 0.308);
+}
+}
+
+
+
+
+.Appoint{
+  /*border-style: double;
+  border-color: red;*/
+  height: 100%;
+  padding-bottom: 20%;
+  background-color: rgba(0, 0, 0, 0.295);
+
+}
+.Appoint h2{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#form{
+
+  margin: auto;
+  border-style: ridge;
+  border-color: rgba(129, 148, 202, 0.192);
+  border-width: 10px;
+  width: fit-content;
+  padding: 10%;
+  background-color: rgba(253, 253, 253, 0.541);
+
+}
+h1{
+  font-family: 'Space Grotesk', sans-serif;
+}
+p{
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: smaller;
+}
+
+
+.footer img{
+width: 100px;
+margin-right: 1%;
+}
+
+.footer{
+  background-color: rgba(248, 248, 248, 0.404);
+
+}
+.footer h2{
+  margin-top: 0;
+}
+
+.footer span{
+  font-size: smaller;
+}
+#textarea {
+
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
