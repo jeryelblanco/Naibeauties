@@ -73,7 +73,7 @@ function myFunction() {
 
   }
 // Getting image from local storage 
-let imageStored = localStorage.getItem("Schedule")
+//let imageStored = localStorage.getItem("Schedule")
 // console.log("file", availFile)
 
     return(
