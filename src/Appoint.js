@@ -6,7 +6,6 @@ function Appoint({availFile}){
     const [formInput, setFormInput] = useState({
         date: '',
         time: '',
-        option: '',
         details: '',
         name: '',
         email: ''
@@ -24,10 +23,9 @@ function Appoint({availFile}){
         setFormInput({
             date: formRef.current[0].value,
             time: formRef.current[1].value,
-            option: formRef.current[2].value,
-            details: formRef.current[3].value,
-            name: formRef.current[4].value,
-            email: formRef.current[5].value
+            details: formRef.current[2].value,
+            name: formRef.current[3].value,
+            email: formRef.current[4].value
         })
 
         //0 is date, 1 is time
@@ -43,7 +41,6 @@ let message = `
 Email: ${formInput.email}
 Date: ${formInput.date}
 Time: ${formInput.time}
-Option: ${formInput.option}
 Message from the client: ${formInput.details}
 `
 
@@ -69,12 +66,15 @@ fetch('https://api.emailjs.com/api/v1.0/email/send', {
 }
 
 console.log(formInput)
-
+// Function for clicking availability
 function myFunction() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
-  }
 
+  }
+// Getting image from local storage 
+let imageStored = localStorage.getItem("Schedule")
+// console.log("file", availFile)
 
     return(
         <div className="Appoint">
@@ -82,7 +82,7 @@ function myFunction() {
             <h2>SCHEDULE YOUR APPOINTMENT</h2>
             <div class = "popup">
             <p onClick = {myFunction} id = "availability">check my availability</p>
-            <img style = {{width: "400px", height: "500px"}} src = {availFile} class="popuptext" id="myPopup"></img>
+            <img style = {{width: "450px", height: "600px"}} src = {availFile} class="popuptext" id="myPopup"></img>
             </div>
             <br></br>
                 <label for = "date">&emsp;&emsp;Date: </label>&emsp;&emsp;

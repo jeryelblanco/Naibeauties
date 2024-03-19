@@ -4,9 +4,11 @@ import Services from './Services';
 import Appoint from './Appoint';
 import Footer from './Footer'
 import Hairstyles from './Hairstyles';
+import defaultCalendar from "./images/scheduledefault.JPG"
 import { useState } from 'react';
 function App() {
-  const [availFile, setAvailFile] = useState("https://m.media-amazon.com/images/I/81dNosrglaL._AC_UF894,1000_QL80_.jpg")
+  const [availFile, setAvailFile] = useState("https://i.ibb.co/fnSSHQ9/scheduledefault.jpg")
+  console.log(typeof(availFile))
   return (
     <div className="App">
       <Header />
