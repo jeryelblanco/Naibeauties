@@ -82,7 +82,7 @@ console.log("file", availFile)
             <h2>SCHEDULE YOUR APPOINTMENT</h2>
             <div class = "popup">
             <p onClick = {myFunction} id = "availability">check my availability</p>
-            <img style = {{width: "450px", height: "600px"}} src = {availFile} class="popuptext" id="myPopup"></img>
+            <img style = {{width: "200%", height: "600px"}} src = {availFile} class="popuptext" id="myPopup"></img>
             </div>
             <br></br>
                 <label for = "date">&emsp;&emsp;Date: </label>&emsp;&emsp;
