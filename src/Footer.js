@@ -51,7 +51,7 @@ console.log(getBool)
            {// <a href = ""><img src = "https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"></img></a> 
            }
            <br></br>
-        <span> &copy; 2024 Lifestylez</span><span onClick={updateCalendar} style = {{cursor: "pointer", float: "right"}}>upload</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span> &copy; 2024 Lifestylez</span><span onClick={updateCalendar} style = {{cursor: "pointer", float: "right"}}>upload</span>
         </footer>
     )
 }
