@@ -74,7 +74,7 @@ function myFunction() {
   }
 // Getting image from local storage 
 //let imageStored = localStorage.getItem("Schedule")
-// console.log("file", availFile)
+console.log("file", availFile)
 
     return(
         <div className="Appoint">
