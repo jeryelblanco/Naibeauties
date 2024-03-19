@@ -7,7 +7,7 @@ import Hairstyles from './Hairstyles';
 import defaultCalendar from "./images/scheduledefault.JPG"
 import { useState } from 'react';
 function App() {
-  const [availFile, setAvailFile] = useState("https://i.ibb.co/fnSSHQ9/scheduledefault.jpg")
+  const [availFile, setAvailFile] = useState({defaultCalendar})
   console.log(typeof(availFile))
   return (
     <div className="App">
