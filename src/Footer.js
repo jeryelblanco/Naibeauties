@@ -47,7 +47,7 @@ console.log(getBool)
             }
             </div>
             <h2>Click below to learn more about my company!</h2>
-            <a target = "_blank" href = "https://www.instagram.com/reel/Cy1LK9HO5aC/"><img src = "https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"></img></a>
+            <a target = "_blank" href = "https://www.instagram.com/nai_beauties?igsh=dTJqdTI0ZmNlcTlz"><img src = "https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"></img></a>
            {// <a href = ""><img src = "https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"></img></a> 
            }
            <br></br>
