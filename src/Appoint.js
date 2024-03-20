@@ -91,7 +91,7 @@ console.log("file", availFile)
                 <label for = "date">&emsp;&emsp;Date: </label>&emsp;&emsp;
                 <input id = "date" type = "date"></input><br></br><br></br><br></br>
                 <label for = "time">Time:                         </label>&emsp;&emsp;
-                <input id = "time" type = "time" required></input><br></br><br></br><br></br>
+                <input id = "time" type = "time" required = "true"></input><br></br><br></br><br></br>
                 <label for = "serv" style = {{fontWeight: "bold", fontSize: "small"}}>SLELECT DESIRED SERVICE: </label>&nbsp;&nbsp;
                 {/* <p style = {{margin: 0, fontSize: "small"}}>*with hair added</p> */}
                 <select id ="serv">
