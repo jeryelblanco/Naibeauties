@@ -6,6 +6,7 @@ function Appoint({availFile}){
     const [formInput, setFormInput] = useState({
         date: '',
         time: '',
+        option: '',
         details: '',
         name: '',
         email: ''
@@ -23,9 +24,10 @@ function Appoint({availFile}){
         setFormInput({
             date: formRef.current[0].value,
             time: formRef.current[1].value,
-            details: formRef.current[2].value,
-            name: formRef.current[3].value,
-            email: formRef.current[4].value
+            option: formRef.current[2].value,
+            details: formRef.current[3].value,
+            name: formRef.current[4].value,
+            email: formRef.current[5].value
         })
 
         //0 is date, 1 is time
@@ -41,6 +43,7 @@ let message = `
 Email: ${formInput.email}
 Date: ${formInput.date}
 Time: ${formInput.time}
+Desired service: ${formInput.option}
 Message from the client: ${formInput.details}
 `
 
@@ -88,10 +91,36 @@ console.log("file", availFile)
                 <label for = "date">&emsp;&emsp;Date: </label>&emsp;&emsp;
                 <input id = "date" type = "date"></input><br></br><br></br><br></br>
                 <label for = "time">Time:                         </label>&emsp;&emsp;
-                <input id = "time" type = "time"></input><br></br><br></br><br></br>
+                <input id = "time" type = "time" required></input><br></br><br></br><br></br>
+                <label for = "serv" style = {{fontWeight: "bold", fontSize: "small"}}>SLELECT DESIRED SERVICE: </label>&nbsp;&nbsp;
+                {/* <p style = {{margin: 0, fontSize: "small"}}>*with hair added</p> */}
+                <select id ="serv">
+                    <option></option>
+                    <option value = "Option #1">Large Box Braids (2 hours @ $40.00)</option>
+                    <option value = "Option #2">Large Twists (2 hours @ $40.00)</option>
+                    <option value = "Option #3">Medium Box Braids (4 hours @ $50.00)</option>
+                    <option value = "Option #4">Medium Twists (4 hours @ $50.00)</option>
+                    <option value = "Option #5">Smedium Box Braids(6 hours @ $65.00)</option>
+                    <option value = "Option #6">Smedium Twists (6 hours @ $65.00)</option>
+                    <option value = "Option #7">2 Cornrows (1 hour @$20.00)</option>
+                    <option value = "Option #8">4 Cornrows (2 hours @$40.00)</option>
+                    <option value = "Option #9">6 Cornrows (3 hours @$60.00)</option>
+                    <option value = "Option #10">8 Cornrows (4 hours @$80.00)</option>
+                    <option>---        with Hair Added        ---</option>
+                    <option value = "Option #11">2 Cornrows (1 hour - 30mins @$30.00)</option>
+                    <option value = "Option #12">4 Cornrows (2 hours - 30mins @$60.00)</option>
+                    <option value = "Option #13">6 Cornrows (4 hours @ $90.00)</option>
+                    <option value = "Option #14">8 Cornrows (5 hours @$120.00)</option>
+                    <option value = "Option #15">Large Goddess Braids (7 hours @$110.00)</option>
+                    <option value = "Option #16">Medium Goddess Braids (8 hours @$130.00)</option>
+                    <option value = "Option #16">Smedium Goddess Braids (9 hours @$150.00)</option>
+                    <option value = "Option #17">Large Knotless Braids (7 hours @$100.00)</option>
+                    <option value = "Option #17">Smedium Knotless Braids (9 hours @$140.00)</option>
+                    <option value = "Option #18">Medium Knotless Braids (8 hours @$120.00)</option>
+                    <option value = "Option #18">Ponytail (2 hours @$50.00)</option>
+                </select>
 
-
-                <h4>Service Details:</h4>
+                <h4 style = {{marginBottom: "0%"}}>Other Details:</h4>
                 <textarea id = "textarea" cols = "30" style={{borderRadius: "5%", borderStyle: "groove", color: "grey", boxSizing: "border-box"}}>
                     
                     </textarea>
