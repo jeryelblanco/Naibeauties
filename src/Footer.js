@@ -35,7 +35,7 @@ function formSubmit(e){
 }
 console.log(getBool)
 
-
+//test
     return (
         <footer className="footer">
             <div>
