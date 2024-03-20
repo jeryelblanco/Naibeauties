@@ -18,6 +18,8 @@ function Appoint({availFile}){
     
     // here im accessing the form element with useRef
     let formRef = useRef()
+    // Creating a ref for options since it is a multi dimensional arr
+    let optionRef = useRef()
         console.log(formRef)
     useEffect(()=> {
 
@@ -36,6 +38,10 @@ function Appoint({availFile}){
         // 4 email
         // 5 submit
     },[booly])
+
+
+console.log(formInput.option)
+
 
 
 // here ive created a custom message to send to email api
@@ -63,8 +69,15 @@ fetch('https://api.emailjs.com/api/v1.0/email/send', {
     headers: {
         "Content-Type": "application/json"
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(data)
 })
+.then(response => {
+    if (response.status === 200){
+        alert("Sent Successfully!")
+    }
+    else alert("Error submitting, please send again.")
+})
+.catch(error => console.log(error))
 
 }
 
@@ -96,28 +109,28 @@ console.log("file", availFile)
                 {/* <p style = {{margin: 0, fontSize: "small"}}>*with hair added</p> */}
                 <select id ="serv">
                     <option></option>
-                    <option value = "Option #1">Large Box Braids (2 hours @ $40.00)</option>
-                    <option value = "Option #2">Large Twists (2 hours @ $40.00)</option>
-                    <option value = "Option #3">Medium Box Braids (4 hours @ $50.00)</option>
-                    <option value = "Option #4">Medium Twists (4 hours @ $50.00)</option>
-                    <option value = "Option #5">Smedium Box Braids(6 hours @ $65.00)</option>
-                    <option value = "Option #6">Smedium Twists (6 hours @ $65.00)</option>
-                    <option value = "Option #7">2 Cornrows (1 hour @$20.00)</option>
-                    <option value = "Option #8">4 Cornrows (2 hours @$40.00)</option>
-                    <option value = "Option #9">6 Cornrows (3 hours @$60.00)</option>
-                    <option value = "Option #10">8 Cornrows (4 hours @$80.00)</option>
+                    <option value = "Large Box Braids">Large Box Braids (2 hours @ $40.00)</option>
+                    <option value = "Large Twists">Large Twists (2 hours @ $40.00)</option>
+                    <option value = "Medium Box Braids">Medium Box Braids (4 hours @ $50.00)</option>
+                    <option value = "Medium Twists">Medium Twists (4 hours @ $50.00)</option>
+                    <option value = "Smedium Box Braids">Smedium Box Braids(6 hours @ $65.00)</option>
+                    <option value = "Smedium Twists">Smedium Twists (6 hours @ $65.00)</option>
+                    <option value = "2 Cornrows">2 Cornrows (1 hour @$20.00)</option>
+                    <option value = "4 Cornrows">4 Cornrows (2 hours @$40.00)</option>
+                    <option value = "6 Cornrows">6 Cornrows (3 hours @$60.00)</option>
+                    <option value = "8 Cornrows">8 Cornrows (4 hours @$80.00)</option>
                     <option>---        with Hair Added        ---</option>
-                    <option value = "Option #11">2 Cornrows (1 hour - 30mins @$30.00)</option>
-                    <option value = "Option #12">4 Cornrows (2 hours - 30mins @$60.00)</option>
-                    <option value = "Option #13">6 Cornrows (4 hours @ $90.00)</option>
-                    <option value = "Option #14">8 Cornrows (5 hours @$120.00)</option>
-                    <option value = "Option #15">Large Goddess Braids (7 hours @$110.00)</option>
-                    <option value = "Option #16">Medium Goddess Braids (8 hours @$130.00)</option>
-                    <option value = "Option #16">Smedium Goddess Braids (9 hours @$150.00)</option>
-                    <option value = "Option #17">Large Knotless Braids (7 hours @$100.00)</option>
-                    <option value = "Option #17">Smedium Knotless Braids (9 hours @$140.00)</option>
-                    <option value = "Option #18">Medium Knotless Braids (8 hours @$120.00)</option>
-                    <option value = "Option #18">Ponytail (2 hours @$50.00)</option>
+                    <option value = "2 Cornrows [with Hair Added]">2 Cornrows (1 hour - 30mins @$30.00)</option>
+                    <option value = "4 Cornrows [with Hair Added]">4 Cornrows (2 hours - 30mins @$60.00)</option>
+                    <option value = "6 Cornrows [with Hair Added]">6 Cornrows (4 hours @ $90.00)</option>
+                    <option value = "8 Cornrows [with Hair Added]">8 Cornrows (5 hours @$120.00)</option>
+                    <option value = "Large Goddess Braids [with Hair Added]">Large Goddess Braids (7 hours @$110.00)</option>
+                    <option value = "Medium Goddess Braids [with Hair Added]">Medium Goddess Braids (8 hours @$130.00)</option>
+                    <option value = "Smedium Goddess Braids [with Hair Added]">Smedium Goddess Braids (9 hours @$150.00)</option>
+                    <option value = "Large Knotless Braids [with Hair Added]">Large Knotless Braids (7 hours @$100.00)</option>
+                    <option value = "Smedium Knotless Braids [with Hair Added]">Smedium Knotless Braids (9 hours @$140.00)</option>
+                    <option value = "Medium Knotless Braids [with Hair Added]">Medium Knotless Braids (8 hours @$120.00)</option>
+                    <option value = "Ponytail [with Hair Added]">Ponytail (2 hours @$50.00)</option>
                 </select>
 
                 <h4 style = {{marginBottom: "0%"}}>Other Details:</h4>
