@@ -5,7 +5,9 @@ import image1 from './images/image1.jpeg'
 import image2 from './images/image2.jpeg'
 import image3 from './images/image3.jpeg'
 import image4 from './images/image4.jpeg'
-
+import image5 from './images/image5.jpeg'
+import image6 from './images/image6.jpeg'
+import image7 from './images/image7.jpeg'
 import { useEffect, useState, useRef } from 'react';
 import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 
@@ -35,6 +37,8 @@ const spanStyle = {
     
   }
 
+  
+
 
   // This is for the servDiv which is a the list of services
   const servDescription = {
@@ -50,18 +54,18 @@ const spanStyle = {
       url: image4,
       caption: 'Option #1',
       description1: ' $15 deposit required',
-      description2: 'Book me!',
+      description2: 'Schedule an appointment below!',
     },
     {
       url: image3,
       caption: 'Option #2',
-      description1: 'Box Braids',
-      description2: 'All Colors!',
+      description1: 'Knotless Braids',
+      description2: 'different styles',
     },
     {
       url: image2,
       caption: 'Option #3',
-      description1: 'Cornrolls',
+      description1: 'Cornrows',
       description2: '& More',
     },
     {
@@ -74,9 +78,28 @@ const spanStyle = {
       url: image,
       caption: 'Option #5',
       description1: 'Wide variety',
-      description2: 'Visit my page for more!',
+      description2: 'Visit my IG page for more!',
+    },
+    {
+      url: image5,
+      caption: 'Option #6',
+      description1: 'Deposit REQUIRED\n\nto hold appointment',
+    },
+    {
+      url: image6,
+      caption: 'Option #7',
+      description1: 'Schedule your appointment now',
+      description2: 'LIMITED availability',
+    },
+    {
+      url: image7,
+      caption: 'Option #8',
+      description1: 'Elvevate your style',
+      description2: 'Visit my IG page below',
     }
   ];
+
+
 /*
   let x = window.matchMedia("(max-width: 812px)")
   let servDiv = document.getElementById("servDiv")

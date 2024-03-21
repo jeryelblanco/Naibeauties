@@ -16,6 +16,7 @@
   "scripts": {
     "build": "react-scripts build",
     "start": "serve -s build",
+    "titi": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
