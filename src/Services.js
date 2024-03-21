@@ -51,19 +51,19 @@ const spanStyle = {
   }
   const slideImages = [
     {
-      url: image4,
+      url: image7,
       caption: 'Option #1',
       description1: ' $15 deposit required',
       description2: 'Schedule an appointment below!',
     },
     {
-      url: image3,
+      url: image6,
       caption: 'Option #2',
       description1: 'Knotless Braids',
       description2: 'different styles',
     },
     {
-      url: image2,
+      url: image5,
       caption: 'Option #3',
       description1: 'Cornrows',
       description2: '& More',
@@ -79,24 +79,24 @@ const spanStyle = {
       caption: 'Option #5',
       description1: 'Wide variety',
       description2: 'Visit my IG page for more!',
-    },
-    {
-      url: image5,
-      caption: 'Option #6',
-      description1: 'Deposit REQUIRED\n\nto hold appointment',
-    },
-    {
-      url: image6,
-      caption: 'Option #7',
-      description1: 'Schedule your appointment now',
-      description2: 'LIMITED availability',
-    },
-    {
-      url: image7,
-      caption: 'Option #8',
-      description1: 'Elvevate your style',
-      description2: 'Visit my IG page below',
     }
+    // {
+    //   url: image5,
+    //   caption: 'Option #6',
+    //   description1: 'Deposit REQUIRED\n\nto hold appointment',
+    // },
+    // {
+    //   url: image6,
+    //   caption: 'Option #7',
+    //   description1: 'Schedule your appointment now',
+    //   description2: 'LIMITED availability',
+    // },
+    // {
+    //   url: image7,
+    //   caption: 'Option #8',
+    //   description1: 'Elvevate your style',
+    //   description2: 'Visit my IG page below',
+    // }
   ];
 
 

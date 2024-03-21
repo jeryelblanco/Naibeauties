@@ -227,7 +227,13 @@
   float: right;
   background-color: rgba(137, 43, 226, 0.308);
 }
+.header h1{
+ margin: 0;
+
+
 }
+}
+
 
 
 
