@@ -3,7 +3,7 @@
 function Header(){
 return (
 <div className="header">
-<h1>Nai Beauties</h1>
+<h1>Nai's Beauties</h1>
 </div>
 )
 }
