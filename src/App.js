@@ -34,7 +34,7 @@ useEffect(()=> {
   //   console.log(data) 
   // }
   
-console.log("filey", availFile)
+//console.log("filey", availFile)
   return (
     <div className="App">
       <Header />
