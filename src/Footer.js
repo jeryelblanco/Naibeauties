@@ -1,7 +1,7 @@
 import { useState } from "react"
 import defaultCalendar from "./images/scheduledefault.JPG"
 function Footer ({setAvailFile}){
-require('dotenv').config()
+//require('dotenv').config()
 //const port = process.env.PORT
     const [getBool, setBool] = useState(false)
 
