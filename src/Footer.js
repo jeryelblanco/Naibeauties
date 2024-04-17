@@ -57,7 +57,7 @@ console.log(getBool)
 
 //test
 
-const urlImage = `https://0.0.0.0:${port}/image`
+const urlImage = `http://0.0.0.0:${port}/image`
 
 
     return (
