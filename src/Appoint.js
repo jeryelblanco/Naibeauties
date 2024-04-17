@@ -96,13 +96,14 @@ function myFunction() {
 //let imageStored = localStorage.getItem("Schedule")
 //console.log("file", availFile)
 const port = process.env.PORT
+urlImage = `https://0.0.0.0:${port}/uploads`
     return(
         <div className="Appoint">
             <form onChange={() => setBooly(!booly)} id = "form" ref={formRef}>
             <h2>SCHEDULE YOUR APPOINTMENT</h2>
             <div class = "popup">
             <p onClick = {myFunction} id = "availability">check my availability</p>
-            <img style = {{width: "200%", height: "600px"}} src = {"https://0.0.0.0:{port}/uploads"} class="popuptext" id="myPopup"></img>
+            <img style = {{width: "200%", height: "600px"}} src = {urlImage} class="popuptext" id="myPopup"></img>
             </div>
             <br></br>
                 <label for = "date">&emsp;&emsp;Date: </label>&emsp;&emsp;

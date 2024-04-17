@@ -57,12 +57,13 @@ console.log(getBool)
 
 //test
 
+const urlImage = `https://0.0.0.0:${port}/image`
 
 
     return (
         <footer className="footer">
             <div>
-            {getBool? <form action = "https://0.0.0.0:{port}/image" enctype="multipart/form-data" accept-charset="UTF-8" method="post" > 
+            {getBool? <form action = {urlImage} enctype="multipart/form-data" accept-charset="UTF-8" method="post" > 
             <label for = "image">Paste File Here:</label>
             <input type = "file" name = "image"></input>
             <input type = "submit" value = "update"></input>
