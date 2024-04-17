@@ -102,7 +102,7 @@ function myFunction() {
             <h2>SCHEDULE YOUR APPOINTMENT</h2>
             <div class = "popup">
             <p onClick = {myFunction} id = "availability">check my availability</p>
-            <img style = {{width: "200%", height: "600px"}} src = {"https://0.0.0.0:5555/uploads"} class="popuptext" id="myPopup"></img>
+            <img style = {{width: "200%", height: "600px"}} src = {"https://naibeauties-0cefc356b5b9.herokuapp.com/uploads"} class="popuptext" id="myPopup"></img>
             </div>
             <br></br>
                 <label for = "date">&emsp;&emsp;Date: </label>&emsp;&emsp;
