@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import defaultCalendar from "./images/scheduledefault.JPG"
 function Footer ({setAvailFile}){
 
     const [getBool, setBool] = useState(false)
@@ -26,22 +26,45 @@ else {
 }
 
 // funciton handling submission of a calendar upload
+
+/*
 function formSubmit(e){
     e.preventDefault()
-    setAvailFile(e.target.filename.value)
     //localStorage.setItem("Schedule", e.target.filename.value)
-    console.log(e.target.filename.value)
+    fetch("http://127.0.0.1:5000/image", {
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    // headers: {
+    //     "Content-Type" : "multipart/form-data; boundary = ----WebKitFormBoundaryBODBNK9vWWeDNOP1"
+
+    // },
+    body: {
+    image: e.target.image.value
+    }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+   // .then(data => setAvailFile(data.image))
+
+    console.log(e.target)
     setBool(!getBool)
 }
 console.log(getBool)
+*/
 
 //test
+
+
+
     return (
         <footer className="footer">
             <div>
-            {getBool? <form onSubmit={formSubmit}>
-            <label for = "filename">Paste File Here:</label>
-            <input type = "text" id = "myFile" name = "filename"></input>
+            {getBool? <form action = "http://127.0.0.1:5000/image" enctype="multipart/form-data" accept-charset="UTF-8" method="post" > 
+            <label for = "image">Paste File Here:</label>
+            <input type = "file" name = "image"></input>
             <input type = "submit" value = "update"></input>
             </form> : null
             }

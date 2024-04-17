@@ -71,7 +71,7 @@ const spanStyle = {
     {
       url: image1,
       caption: 'Option #4',
-      description1: 'Nai Gloss',
+      description1: 'Nai\'s Gloss',
       description2: 'Different flavors',
     },
     {

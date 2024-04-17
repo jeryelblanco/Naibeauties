@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 
 function Appoint({availFile}){
-
     // here im creating a state to store user input
     const [formInput, setFormInput] = useState({
         date: '',
@@ -9,10 +8,11 @@ function Appoint({availFile}){
         option: '',
         details: '',
         name: '',
-        email: ''
+        email: '',
+        phone: ''
     })
 
-
+    const [popImage, setPopImage] = useState("")
     //here i've created a boolean state to track changes in the form
     const [booly, setBooly] = useState()
     
@@ -29,7 +29,8 @@ function Appoint({availFile}){
             option: formRef.current[2].value,
             details: formRef.current[3].value,
             name: formRef.current[4].value,
-            email: formRef.current[5].value
+            email: formRef.current[5].value,
+            phone: formRef.current[6].value
         })
 
         //0 is date, 1 is time
@@ -47,6 +48,7 @@ console.log(formInput.option)
 // here ive created a custom message to send to email api
 let message = `
 Email: ${formInput.email}
+Phone: ${formInput.phone}
 Date: ${formInput.date}
 Time: ${formInput.time}
 Desired service: ${formInput.option}
@@ -81,16 +83,18 @@ fetch('https://api.emailjs.com/api/v1.0/email/send', {
 
 }
 
-console.log(formInput)
+
+//console.log(formInput)
 // Function for clicking availability
+
 function myFunction() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
-
   }
+
 // Getting image from local storage 
 //let imageStored = localStorage.getItem("Schedule")
-console.log("file", availFile)
+//console.log("file", availFile)
 
     return(
         <div className="Appoint">
@@ -98,7 +102,7 @@ console.log("file", availFile)
             <h2>SCHEDULE YOUR APPOINTMENT</h2>
             <div class = "popup">
             <p onClick = {myFunction} id = "availability">check my availability</p>
-            <img style = {{width: "200%", height: "600px"}} src = {availFile} class="popuptext" id="myPopup"></img>
+            <img style = {{width: "200%", height: "600px"}} src = {"http://127.0.0.1:5000/uploads"} class="popuptext" id="myPopup"></img>
             </div>
             <br></br>
                 <label for = "date">&emsp;&emsp;Date: </label>&emsp;&emsp;
@@ -109,28 +113,27 @@ console.log("file", availFile)
                 {/* <p style = {{margin: 0, fontSize: "small"}}>*with hair added</p> */}
                 <select id ="serv">
                     <option></option>
-                    <option value = "Large Box Braids">Large Box Braids (2 hours @ $40.00)</option>
-                    <option value = "Large Twists">Large Twists (2 hours @ $40.00)</option>
-                    <option value = "Medium Box Braids">Medium Box Braids (4 hours @ $50.00)</option>
-                    <option value = "Medium Twists">Medium Twists (4 hours @ $50.00)</option>
-                    <option value = "Smedium Box Braids">Smedium Box Braids(6 hours @ $65.00)</option>
-                    <option value = "Smedium Twists">Smedium Twists (6 hours @ $65.00)</option>
-                    <option value = "2 Cornrows">2 Cornrows (1 hour @$20.00)</option>
-                    <option value = "4 Cornrows">4 Cornrows (2 hours @$40.00)</option>
-                    <option value = "6 Cornrows">6 Cornrows (3 hours @$60.00)</option>
-                    <option value = "8 Cornrows">8 Cornrows (4 hours @$80.00)</option>
-                    <option>---        with Hair Added        ---</option>
-                    <option value = "2 Cornrows [with Hair Added]">2 Cornrows (1 hour - 30mins @$30.00)</option>
-                    <option value = "4 Cornrows [with Hair Added]">4 Cornrows (2 hours - 30mins @$60.00)</option>
-                    <option value = "6 Cornrows [with Hair Added]">6 Cornrows (4 hours @ $90.00)</option>
-                    <option value = "8 Cornrows [with Hair Added]">8 Cornrows (5 hours @$120.00)</option>
-                    <option value = "Large Goddess Braids [with Hair Added]">Large Goddess Braids (7 hours @$110.00)</option>
-                    <option value = "Medium Goddess Braids [with Hair Added]">Medium Goddess Braids (8 hours @$130.00)</option>
-                    <option value = "Smedium Goddess Braids [with Hair Added]">Smedium Goddess Braids (9 hours @$150.00)</option>
-                    <option value = "Large Knotless Braids [with Hair Added]">Large Knotless Braids (7 hours @$100.00)</option>
-                    <option value = "Smedium Knotless Braids [with Hair Added]">Smedium Knotless Braids (9 hours @$140.00)</option>
-                    <option value = "Medium Knotless Braids [with Hair Added]">Medium Knotless Braids (8 hours @$120.00)</option>
-                    <option value = "Ponytail [with Hair Added]">Ponytail (2 hours @$50.00)</option>
+                    <option value = "Large Box Braids">Large Box Braids - $40.00</option>
+                    <option value = "Large Twists">Large Twists - $40.00</option>
+                    <option value = "Medium Box Braids">Medium Box Braids- $50.00</option>
+                    <option value = "Medium Twists">Medium Twists - $50.00</option>
+                    <option value = "Smedium Box Braids">Smedium Box Braids - $65.00</option>
+                    <option value = "Smedium Twists">Smedium Twists - $65.00</option>
+                    <option value = "2 Cornrows">2 Cornrows - $20.00</option>
+                    <option value = "4 Cornrows">4 Cornrows - $40.00</option>
+                    <option value = "6 Cornrows">6 Cornrows - $60.00</option>
+                    <option value = "8 Cornrows">8 Cornrows - $80.00</option>
+                    <option value = "2 Cornrows [with Hair Added]">2 Cornrows - with Hair Added $30.00</option>
+                    <option value = "4 Cornrows [with Hair Added]">4 Cornrows - with Hair Added $60.00</option>
+                    <option value = "6 Cornrows [with Hair Added]">6 Cornrows - with Hair Added $90.00</option>
+                    <option value = "8 Cornrows [with Hair Added]">8 Cornrows - with Hair Added $120.00</option>
+                    <option value = "Large Goddess Braids [with Hair Added]">Large Goddess Braids - with Hair Added $110.00</option>
+                    <option value = "Medium Goddess Braids [with Hair Added]">Medium Goddess Braids - with Hair Added $130.00</option>
+                    <option value = "Smedium Goddess Braids [with Hair Added]">Smedium Goddess Braids - with Hair Added $150.00</option>
+                    <option value = "Large Knotless Braids [with Hair Added]">Large Knotless Braids - with Hair Added $100.00</option>
+                    <option value = "Smedium Knotless Braids [with Hair Added]">Smedium Knotless Braids - with Hair Added $140.00</option>
+                    <option value = "Medium Knotless Braids [with Hair Added]">Medium Knotless Braids - with Hair Added $120.00</option>
+                    <option value = "Ponytail [with Hair Added]">Ponytail - with Hair Added $50.00</option>
                 </select>
 
                 <h4 style = {{marginBottom: "0%"}}>Other Details:</h4>
@@ -142,6 +145,8 @@ console.log("file", availFile)
                     <input type = "name" style={{borderRadius: "7%", borderStyle: "groove", color: "grey"}}></input><br></br><br></br>
                     <label for = "email">Email: </label>
                     <input type = "email" style={{borderRadius: "7%", borderStyle: "groove", color: "grey"}}></input><br></br><br></br>
+                    <label for = "phone">Phone: </label>
+                    <input type = "phone" style={{borderRadius: "7%", borderStyle: "groove", color: "grey"}}></input><br></br><br></br>
                 <input onClick = {handleSubmit} type = "submit" value= "Submit"></input>
             </form>
         </div>
