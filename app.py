@@ -114,4 +114,4 @@ def serve_image():
 
 ## this is where we run the server, no port is specified 
 if __name__ == "__main__":
-        app.run(host = 'https://naibeauties-0cefc356b5b9.herokuapp.com')
+        app.run()
