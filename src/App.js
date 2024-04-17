@@ -8,8 +8,6 @@ import defaultCalendar from "./images/scheduledefault.JPG"
 import { useState, useEffect} from 'react';
 function App() {
 const [availFile, setAvailFile] = useState("")
-
-
 // useEffect(()=> {
 //   fetch("http://127.0.0.1:5000/uploads")
 //   .then(data => console.log(data))
