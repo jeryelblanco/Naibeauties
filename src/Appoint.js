@@ -95,7 +95,7 @@ function myFunction() {
 // Getting image from local storage 
 //let imageStored = localStorage.getItem("Schedule")
 //console.log("file", availFile)
-//require('dotenv').config()
+require('dotenv').config()
 const port = process.env.PORT
 const urlImage = `http://0.0.0.0:${port}/uploads`
 console.log(port)
