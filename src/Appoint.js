@@ -97,6 +97,7 @@ function myFunction() {
 //console.log("file", availFile)
 const port = process.env.PORT
 const urlImage = `http://0.0.0.0:${port}/uploads`
+console.log(port)
     return(
         <div className="Appoint">
             <form onChange={() => setBooly(!booly)} id = "form" ref={formRef}>
