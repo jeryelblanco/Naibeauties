@@ -2,7 +2,7 @@ import { useState } from "react"
 import defaultCalendar from "./images/scheduledefault.JPG"
 function Footer ({setAvailFile}){
 require('dotenv').config()
-const port = process.env.PORT
+//const port = process.env.PORT
     const [getBool, setBool] = useState(false)
 
 function updateCalendar(){
@@ -58,7 +58,7 @@ console.log(getBool)
 
 //test
 
-const urlImage = `http://0.0.0.0:${port}/image`
+const urlImage = `http://0.0.0.0/image`
 
 console.log("port", port)
 
