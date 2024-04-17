@@ -62,7 +62,7 @@ console.log(getBool)
     return (
         <footer className="footer">
             <div>
-            {getBool? <form action = "http://0.0.0.0/image" enctype="multipart/form-data" accept-charset="UTF-8" method="post" > 
+            {getBool? <form action = "http://0.0.0.0:5000/image" enctype="multipart/form-data" accept-charset="UTF-8" method="post" > 
             <label for = "image">Paste File Here:</label>
             <input type = "file" name = "image"></input>
             <input type = "submit" value = "update"></input>
