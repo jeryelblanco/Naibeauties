@@ -114,4 +114,4 @@ def serve_image():
 
 ## this is where we run the server, no port is specified 
 if __name__ == "__main__":
-        app.run()
+        app.run(port = 8080)
