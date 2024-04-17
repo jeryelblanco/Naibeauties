@@ -1,7 +1,7 @@
 import { useState } from "react"
 import defaultCalendar from "./images/scheduledefault.JPG"
 function Footer ({setAvailFile}){
-
+const port = process.env.PORT
     const [getBool, setBool] = useState(false)
 
 function updateCalendar(){
@@ -62,7 +62,7 @@ console.log(getBool)
     return (
         <footer className="footer">
             <div>
-            {getBool? <form action = "https://naibeauties-0cefc356b5b9.herokuapp.com/image" enctype="multipart/form-data" accept-charset="UTF-8" method="post" > 
+            {getBool? <form action = "https://0.0.0.0:{port}/image" enctype="multipart/form-data" accept-charset="UTF-8" method="post" > 
             <label for = "image">Paste File Here:</label>
             <input type = "file" name = "image"></input>
             <input type = "submit" value = "update"></input>
