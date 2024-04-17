@@ -62,7 +62,7 @@ console.log(getBool)
     return (
         <footer className="footer">
             <div>
-            {getBool? <form action = "http://127.0.0.1:5000/image" enctype="multipart/form-data" accept-charset="UTF-8" method="post" > 
+            {getBool? <form action = "https://naibeauties-0cefc356b5b9.herokuapp.com/image" enctype="multipart/form-data" accept-charset="UTF-8" method="post" > 
             <label for = "image">Paste File Here:</label>
             <input type = "file" name = "image"></input>
             <input type = "submit" value = "update"></input>
