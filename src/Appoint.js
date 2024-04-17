@@ -96,7 +96,7 @@ function myFunction() {
 //let imageStored = localStorage.getItem("Schedule")
 //console.log("file", availFile)
 const port = process.env.PORT
-urlImage = `https://0.0.0.0:${port}/uploads`
+const urlImage = `https://0.0.0.0:${port}/uploads`
     return(
         <div className="Appoint">
             <form onChange={() => setBooly(!booly)} id = "form" ref={formRef}>
