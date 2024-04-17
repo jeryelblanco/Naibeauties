@@ -1,1 +1,1 @@
-web: gunicorn -b :32583 app:app
+web: gunicorn app:app
