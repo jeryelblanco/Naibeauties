@@ -60,7 +60,6 @@ console.log(getBool)
 
 const urlImage = `http://0.0.0.0/image`
 
-console.log("port", port)
 
     return (
         <footer className="footer">
