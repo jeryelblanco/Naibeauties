@@ -99,7 +99,7 @@ function myFunction() {
 
 //const port = process.env.PORT || 3000
 const urlImage = `http://0.0.0.0:8080/uploads`
-console.log(port)
+//console.log(port)
     return(
         <div className="Appoint">
             <form onChange={() => setBooly(!booly)} id = "form" ref={formRef}>
