@@ -7,6 +7,8 @@ from werkzeug.utils import secure_filename
 #src\images\scheduledefault.jpeg
 
 ## heroku only recognizes forward slash
+## this is halfway true, heroku is unix based and unix 
+# only accepts forward slash
 UPLOAD_FOLDER = "src/images"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 ## Here we initialize the flask app 
@@ -45,7 +47,7 @@ def serve_image():
 
 
 ## created this to process a get request for the image
-@app.route('/image', methods = ['GET','PATCH', 'POST', 'PUT'])
+@app.route('/image', methods = ['POST'])
 @cross_origin()
 def image_page():
     # if request.method == 'GET':
@@ -82,7 +84,7 @@ def image_page():
         if file and allowed_file(file.filename):
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], "scheduledefault.jpeg"))
             flash("file successfully uploaded")
-            return send_from_directory(app.static_folder, 'index.html')
+            return redirect("https://naibeauties-0cefc356b5b9.herokuapp.com/")
         # test = file.read()
         # print(file)
         # with open(file.filename, 'rb') as f:

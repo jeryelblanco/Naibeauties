@@ -140,7 +140,7 @@ useEffect(()=>{
     divStyle.backgroundPosition = ""
   }
 },[])
-console.log(size)
+//console.log(size)
 
 //this commented line of code is what I initizally was going to use for the window rezising
   //   let x = window.matchMedia("screen and (min-width: 800px")
@@ -167,7 +167,7 @@ console.log(size)
         }
        })
 
-       console.log(size)
+      // console.log(size)
 ///-------------------------------------------------------------
 
 

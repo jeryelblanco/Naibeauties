@@ -20,8 +20,8 @@ function Appoint({availFile}){
     // here im accessing the form element with useRef
     let formRef = useRef()
     // Creating a ref for options since it is a multi dimensional arr
-    let optionRef = useRef()
-        console.log(formRef)
+   // let optionRef = useRef()
+
     useEffect(()=> {
 
         setFormInput({
@@ -42,7 +42,6 @@ function Appoint({availFile}){
     },[booly])
 
 
-console.log(formInput.option)
 
 
 
