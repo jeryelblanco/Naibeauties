@@ -5,6 +5,8 @@ from models import db, Calendar
 from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
 #src\images\scheduledefault.jpeg
+
+## heroku only recognizes forward slash
 UPLOAD_FOLDER = "src/images"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 ## Here we initialize the flask app 
