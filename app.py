@@ -80,7 +80,7 @@ def image_page():
             flash('No selected file')
             return redirect(request.url)
         if file and allowed_file(file.filename):
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], "scheduledefault.JPG"))
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], "scheduledefault.jpeg"))
             flash("file successfully uploaded")
             return send_from_directory(app.static_folder, 'index.html')
         # test = file.read()
