@@ -5,7 +5,7 @@ from models import db, Calendar
 from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = "src\images"
+UPLOAD_FOLDER = "src\images\ "
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 ## Here we initialize the flask app 
 app = Flask(__name__, static_url_path = '', static_folder = 'build')
@@ -16,7 +16,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///calendar.db'
 app.config['SQLALCHEMY_TRAKC_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SECRET_KEY'] = 'supersecretkey'
-
+#src\images\scheduledefault.jpg
 # here we migrate to the database
 migrate = Migrate(app, db)
 db.init_app(app)
@@ -35,6 +35,12 @@ def root_page():
 @cross_origin()
 def test_func():
     return make_response("testing")
+
+@app.route('/uploads', methods = ['GET'])
+@cross_origin()
+def serve_image():
+    return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.JPG")
+
 
 ## created this to process a get request for the image
 @app.route('/image', methods = ['GET','PATCH', 'POST', 'PUT'])
@@ -111,11 +117,6 @@ def image_page():
 
 ## Here I crerate a path to get the file labled "scheduledefault and serve it to the front end"
     
-@app.route('/uploads', methods = ['GET'])
-@cross_origin()
-def serve_image():
-    return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.JPG")
-
 #port = int(os.environ.get("PORT", 17995))
 
 ## this is where we run the server, no port is specified 
