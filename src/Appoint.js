@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import schedule from './images/scheduledefault.jpg'
+import schedule from './images/scheduledefault.jpeg'
 
 function Appoint({availFile}){
     // here im creating a state to store user input
