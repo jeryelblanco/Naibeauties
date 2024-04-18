@@ -31,6 +31,9 @@ def allowed_file(filename):
 def root_page():
     return send_from_directory(app.static_folder, 'index.html')
 
+@app.route('test')
+def test_func():
+    return "testing"
 
 ## created this to process a get request for the image
 @app.route('/image', methods = ['GET','PATCH', 'POST', 'PUT'])
