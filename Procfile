@@ -1,3 +1,3 @@
 web: npm start
-web: waitress-serve app:app
+web: waitress-serve --port $PORT app:app
 
