@@ -36,7 +36,7 @@ def root_page():
 def test_func():
     return make_response("testing")
 
-@app.route('/uploads', methods = ['GET'])
+@app.route('/uploads')
 @cross_origin()
 def serve_image():
     return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.jpg")
