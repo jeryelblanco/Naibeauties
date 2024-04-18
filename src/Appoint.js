@@ -98,6 +98,11 @@ function myFunction() {
 // require('dotenv').config()
 
 //const port = process.env.PORT || 3000
+useEffect(()=>{
+    fetch("/uploads")
+    .then(data => data.json())
+    .then(data => console.log(data))
+},[])
 const urlImage = '/uploads'
     return(
         <div className="Appoint">
