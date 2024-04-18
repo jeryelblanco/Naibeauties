@@ -4,8 +4,8 @@ from flask_migrate import Migrate
 from models import db, Calendar
 from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
-
-UPLOAD_FOLDER = "src\images"
+#src\images\scheduledefault.jpeg
+UPLOAD_FOLDER = "src/images"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 ## Here we initialize the flask app 
 app = Flask(__name__, static_url_path = '', static_folder = 'build')
