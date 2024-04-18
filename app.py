@@ -27,9 +27,9 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 ## this is serving the static website 
-# @app.route('/')
-# def root_page():
-#     return send_from_directory(app.static_folder, 'index.html')
+@app.route('/')
+def root_page():
+    return send_from_directory(app.static_folder, 'index.html')
 
 
 ## created this to process a get request for the image
