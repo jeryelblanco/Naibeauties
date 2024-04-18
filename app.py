@@ -110,8 +110,8 @@ def image_page():
 def serve_image():
     return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.JPG")
 
-port = int(os.environ.get("PORT", 17995))
+#port = int(os.environ.get("PORT", 17995))
 
 ## this is where we run the server, no port is specified 
 if __name__ == "__main__":
-        app.run(host = "127.0.0.1", port = port)
+        app.run()
