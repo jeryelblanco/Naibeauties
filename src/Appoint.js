@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import schedule from './images/scheduledefault.jpg'
 
 function Appoint({availFile}){
     // here im creating a state to store user input
@@ -110,7 +111,7 @@ const urlImage = '/uploads'
             <h2>SCHEDULE YOUR APPOINTMENT</h2>
             <div class = "popup">
             <p onClick = {myFunction} id = "availability">check my availability</p>
-            <img style = {{width: "200%", height: "600px"}} src = {urlImage} class="popuptext" id="myPopup"></img>
+            <img style = {{width: "200%", height: "600px"}} src = {schedule} class="popuptext" id="myPopup"></img>
             </div>
             <br></br>
                 <label for = "date">&emsp;&emsp;Date: </label>&emsp;&emsp;

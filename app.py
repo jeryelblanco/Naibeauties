@@ -39,7 +39,7 @@ def test_func():
 @app.route('/uploads')
 @cross_origin()
 def serve_image():
-    return make_response("yp")
+    return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.jpg")
 
 
 ## created this to process a get request for the image
