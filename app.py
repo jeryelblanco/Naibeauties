@@ -5,7 +5,7 @@ from models import db, Calendar
 from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = "src\images\ "
+UPLOAD_FOLDER = "src\images"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 ## Here we initialize the flask app 
 app = Flask(__name__, static_url_path = '', static_folder = 'build')
@@ -39,7 +39,7 @@ def test_func():
 @app.route('/uploads', methods = ['GET'])
 @cross_origin()
 def serve_image():
-    return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.JPG")
+    return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.jpg")
 
 
 ## created this to process a get request for the image
