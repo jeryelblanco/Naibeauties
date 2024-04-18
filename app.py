@@ -2,7 +2,7 @@ import os
 from flask import Flask, make_response, request, jsonify, send_from_directory, flash, redirect, url_for
 from flask_migrate import Migrate
 from models import db, Calendar
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = "src\images"
@@ -34,6 +34,7 @@ def root_page():
 
 ## created this to process a get request for the image
 @app.route('/image', methods = ['GET','PATCH', 'POST', 'PUT'])
+@cross_origin()
 def image_page():
     # if request.method == 'GET':
     #     blog_list = [this.to_dict() for this in Calendar.query.all()]
@@ -107,6 +108,7 @@ def image_page():
 ## Here I crerate a path to get the file labled "scheduledefault and serve it to the front end"
     
 @app.route('/uploads', methods = ['GET'])
+@cross_origin()
 def serve_image():
     return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.JPG")
 

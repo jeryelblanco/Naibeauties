@@ -58,7 +58,7 @@ console.log(getBool)
 
 //test
 
-const urlImage = `http://localhost:8080/image`
+const urlImage = '/image'
 
 
     return (

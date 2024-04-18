@@ -98,8 +98,7 @@ function myFunction() {
 // require('dotenv').config()
 
 //const port = process.env.PORT || 3000
-const urlImage = `http://0.0.0.0:17732/uploads`
-console.log(process.env.PORT)
+const urlImage = '/uploads'
     return(
         <div className="Appoint">
             <form onChange={() => setBooly(!booly)} id = "form" ref={formRef}>
