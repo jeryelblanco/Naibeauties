@@ -4,7 +4,6 @@ import Services from './Services';
 import Appoint from './Appoint';
 import Footer from './Footer'
 import Hairstyles from './Hairstyles';
-import defaultCalendar from "./images/scheduledefault.JPG"
 import { useState, useEffect} from 'react';
 function App() {
 const [availFile, setAvailFile] = useState("")
