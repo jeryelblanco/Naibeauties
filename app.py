@@ -27,9 +27,9 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 ## this is serving the static website 
-@app.route('/')
-def root_page():
-    return send_from_directory(app.static_folder, 'index.html')
+# @app.route('/')
+# def root_page():
+#     return send_from_directory(app.static_folder, 'index.html')
 
 
 ## created this to process a get request for the image
@@ -110,8 +110,8 @@ def image_page():
 def serve_image():
     return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.JPG")
 
-#port = int(os.environ.get("PORT", 17995))
+port = int(os.environ.get("PORT", 17995))
 
 ## this is where we run the server, no port is specified 
 if __name__ == "__main__":
-        app.run(host = "127.0.0.1")
+        app.run(host = "127.0.0.1", port = port)

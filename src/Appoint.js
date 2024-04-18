@@ -97,8 +97,8 @@ function myFunction() {
 //console.log("file", availFile)
 // require('dotenv').config()
 
-const port = process.env.PORT || 3000
-const urlImage = `http://0.0.0.0:${port}/uploads`
+//const port = process.env.PORT || 3000
+const urlImage = `http://0.0.0.0:8080/uploads`
 console.log(port)
     return(
         <div className="Appoint">
