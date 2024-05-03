@@ -5,7 +5,6 @@ function Appoint({availFile}){
     // here im creating a state to store user input
     const [formInput, setFormInput] = useState({
         date: '',
-        time: '',
         option: '',
         details: '',
         name: '',
@@ -26,12 +25,11 @@ function Appoint({availFile}){
 
         setFormInput({
             date: formRef.current[0].value,
-            time: formRef.current[1].value,
-            option: formRef.current[2].value,
-            details: formRef.current[3].value,
-            name: formRef.current[4].value,
-            email: formRef.current[5].value,
-            phone: formRef.current[6].value
+            option: formRef.current[1].value,
+            details: formRef.current[2].value,
+            name: formRef.current[3].value,
+            email: formRef.current[4].value,
+            phone: formRef.current[5].value
         })
 
         //0 is date, 1 is time
@@ -50,7 +48,6 @@ let message = `
 Email: ${formInput.email}
 Phone: ${formInput.phone}
 Date: ${formInput.date}
-Time: ${formInput.time}
 Desired service: ${formInput.option}
 Message from the client: ${formInput.details}
 `
@@ -104,6 +101,8 @@ useEffect(()=>{
     .then(data => console.log(data))
 },[])
 const urlImage = '/uploads'
+
+console.log("calendar", document.getElementById("date").value)
     return(
         <div className="Appoint">
             <form onChange={() => setBooly(!booly)} id = "form" ref={formRef}>
@@ -115,8 +114,6 @@ const urlImage = '/uploads'
             <br></br>
                 <label for = "date">&emsp;&emsp;Date: </label>&emsp;&emsp;
                 <input id = "date" type = "date"></input><br></br><br></br><br></br>
-                <label for = "time">Time:                         </label>&emsp;&emsp;
-                <input id = "time" type = "time" required = "true"></input><br></br><br></br><br></br>
                 <label for = "serv" style = {{fontWeight: "bold", fontSize: "small"}}>SLELECT DESIRED SERVICE: </label>&nbsp;&nbsp;
                 {/* <p style = {{margin: 0, fontSize: "small"}}>*with hair added</p> */}
                 <select id ="serv">
