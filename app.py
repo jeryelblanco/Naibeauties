@@ -45,6 +45,10 @@ def test_func():
 def serve_image():
     return send_from_directory(app.config['UPLOAD_FOLDER'], "scheduledefault.jpeg")
 
+# @app.route('/prices')
+# @cross_origin()
+# def price_list():
+#     return send_from_directory(app.config['UPLOAD_FOLDER'], "pricelist.jpeg")
 
 ## created this to process a get request for the image
 @app.route('/image', methods = ['POST'])
@@ -84,7 +88,7 @@ def image_page():
         if file and allowed_file(file.filename):
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], "scheduledefault.jpeg"))
             flash("file successfully uploaded")
-            return redirect("https://naibeauties-0cefc356b5b9.herokuapp.com/")
+            return redirect("https://wwww.naibeauties.online")
         # test = file.read()
         # print(file)
         # with open(file.filename, 'rb') as f:

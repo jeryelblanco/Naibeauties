@@ -47,6 +47,38 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.37)
 }
+
+.NavLink{
+  border-style: outset;
+  border-right-style: none;
+  border-left-style: none;
+  border-top-style: none;
+  border-width: 5px;
+
+  width: 100%;
+  height: 10%;
+}
+.NavLink a{
+  margin-right: 5%;
+  text-decoration: none;
+  font-family: 'Merienda', cursive;
+  color: lightslategray;
+}
+
+
+.Prices{
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Prices img{
+  width: 100%;
+  height: 100%;
+}
+
 .header{
  border-style: double;
   border-color: rgba(0, 0, 0, 0);

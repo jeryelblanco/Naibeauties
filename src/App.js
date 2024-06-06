@@ -4,7 +4,10 @@ import Services from './Services';
 import Appoint from './Appoint';
 import Footer from './Footer'
 import Hairstyles from './Hairstyles';
+import Prices from './Prices';
 import { useState, useEffect} from 'react';
+import { Switch, Route } from 'react-router';
+import Nav from './Nav'
 function App() {
 const [availFile, setAvailFile] = useState("")
 // useEffect(()=> {
@@ -36,12 +39,19 @@ useEffect(()=> {
 //console.log("filey", availFile)
   return (
     <div className="App">
+      <Nav/>
+      <Switch>
+      <Route exact path = "/">
       <Header />
       <Hairstyles />
       <Services />
       <Appoint availFile = {availFile}/>
       <Footer setAvailFile = {setAvailFile} />
-
+      </Route>
+      <Route exact path = "/prices">
+        <Prices />
+      </Route>
+      </Switch>
     </div>
   );
 }

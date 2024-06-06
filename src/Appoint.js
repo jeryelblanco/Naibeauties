@@ -102,7 +102,7 @@ useEffect(()=>{
 },[])
 const urlImage = '/uploads'
 
-console.log("calendar", document.getElementById("date").value)
+//console.log("calendar", document.getElementById("date").value)
     return(
         <div className="Appoint">
             <form onChange={() => setBooly(!booly)} id = "form" ref={formRef}>
@@ -117,7 +117,10 @@ console.log("calendar", document.getElementById("date").value)
                 <label for = "serv" style = {{fontWeight: "bold", fontSize: "small"}}>SLELECT DESIRED SERVICE: </label>&nbsp;&nbsp;
                 {/* <p style = {{margin: 0, fontSize: "small"}}>*with hair added</p> */}
                 <select id ="serv">
-                    <option></option>
+                    {/* <option></option>
+                    <option>----------KNOTLESS BRAIDS-----------</option>
+                    <option value = "Large Knotless">Large Knotless - $115.00</option>
+                    <option value = "Large Knotless">Large Knotless - $140.00</option> */}
                     <option value = "Large Box Braids">Large Box Braids - $40.00</option>
                     <option value = "Large Twists">Large Twists - $40.00</option>
                     <option value = "Medium Box Braids">Medium Box Braids- $50.00</option>
@@ -135,9 +138,9 @@ console.log("calendar", document.getElementById("date").value)
                     <option value = "Large Goddess Braids [with Hair Added]">Large Goddess Braids - with Hair Added $110.00</option>
                     <option value = "Medium Goddess Braids [with Hair Added]">Medium Goddess Braids - with Hair Added $130.00</option>
                     <option value = "Smedium Goddess Braids [with Hair Added]">Smedium Goddess Braids - with Hair Added $150.00</option>
-                    <option value = "Large Knotless Braids [with Hair Added]">Large Knotless Braids - with Hair Added $100.00</option>
-                    <option value = "Smedium Knotless Braids [with Hair Added]">Smedium Knotless Braids - with Hair Added $140.00</option>
-                    <option value = "Medium Knotless Braids [with Hair Added]">Medium Knotless Braids - with Hair Added $120.00</option>
+                    <option value = "Large Knotless Braids [with Hair Added]">Large Knotless Braids - with Hair Added $115.00</option>
+                    <option value = "Smedium Knotless Braids [with Hair Added]">Smedium Knotless Braids - with Hair Added $165.00</option>
+                    <option value = "Medium Knotless Braids [with Hair Added]">Medium Knotless Braids - with Hair Added $140.00</option>
                     <option value = "Ponytail [with Hair Added]">Ponytail - with Hair Added $50.00</option>
                 </select>
 
