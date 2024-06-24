@@ -117,31 +117,47 @@ const urlImage = '/uploads'
                 <label for = "serv" style = {{fontWeight: "bold", fontSize: "small"}}>SLELECT DESIRED SERVICE: </label>&nbsp;&nbsp;
                 {/* <p style = {{margin: 0, fontSize: "small"}}>*with hair added</p> */}
                 <select id ="serv">
-                    {/* <option></option>
+                    <option></option>
                     <option>----------KNOTLESS BRAIDS-----------</option>
                     <option value = "Large Knotless">Large Knotless - $115.00</option>
-                    <option value = "Large Knotless">Large Knotless - $140.00</option> */}
-                    <option value = "Large Box Braids">Large Box Braids - $40.00</option>
-                    <option value = "Large Twists">Large Twists - $40.00</option>
-                    <option value = "Medium Box Braids">Medium Box Braids- $50.00</option>
-                    <option value = "Medium Twists">Medium Twists - $50.00</option>
-                    <option value = "Smedium Box Braids">Smedium Box Braids - $65.00</option>
-                    <option value = "Smedium Twists">Smedium Twists - $65.00</option>
-                    <option value = "2 Cornrows">2 Cornrows - $20.00</option>
-                    <option value = "4 Cornrows">4 Cornrows - $40.00</option>
-                    <option value = "6 Cornrows">6 Cornrows - $60.00</option>
-                    <option value = "8 Cornrows">8 Cornrows - $80.00</option>
-                    <option value = "2 Cornrows [with Hair Added]">2 Cornrows - with Hair Added $30.00</option>
-                    <option value = "4 Cornrows [with Hair Added]">4 Cornrows - with Hair Added $60.00</option>
-                    <option value = "6 Cornrows [with Hair Added]">6 Cornrows - with Hair Added $90.00</option>
-                    <option value = "8 Cornrows [with Hair Added]">8 Cornrows - with Hair Added $120.00</option>
-                    <option value = "Large Goddess Braids [with Hair Added]">Large Goddess Braids - with Hair Added $110.00</option>
-                    <option value = "Medium Goddess Braids [with Hair Added]">Medium Goddess Braids - with Hair Added $130.00</option>
-                    <option value = "Smedium Goddess Braids [with Hair Added]">Smedium Goddess Braids - with Hair Added $150.00</option>
-                    <option value = "Large Knotless Braids [with Hair Added]">Large Knotless Braids - with Hair Added $115.00</option>
-                    <option value = "Smedium Knotless Braids [with Hair Added]">Smedium Knotless Braids - with Hair Added $165.00</option>
-                    <option value = "Medium Knotless Braids [with Hair Added]">Medium Knotless Braids - with Hair Added $140.00</option>
-                    <option value = "Ponytail [with Hair Added]">Ponytail - with Hair Added $50.00</option>
+                    <option value = "Medium Knotless">Medium Knotless - $140.00</option>
+                    <option value = "Smedium Knotless">Smedium Knotless - $165.00</option>
+                    <option>----------SHORT KNOTLESS-----------</option>
+                    <option value = "Large Knotless">Large Knotless - $100.00</option>
+                    <option value = "Medium Knotless">Medium Knotless - $125.00</option>
+                    <option value = "Smedium Knotless">Smedium Knotless - $150.00</option>
+                    <option>----------BOHO KNOTLESS-----------</option>
+                    <option value = "Large Boho Knotless">Large Boho Knotless - $130.00</option>
+                    <option value = "Medium Boho Knotless">Medium Boho Knotless - $155.00</option>
+                    <option value = "Smedium Boho Knotless">Smedium Boho Knotless - $180.00</option>
+                    <option>----------SHORT BOHO-----------</option>
+                    <option value = "Large Boho Knotless">Large Boho Knotless - $115.00</option>
+                    <option value = "Medium Boho Knotless">Medium BohoKnotless - $140.00</option>
+                    <option value = "Smedium Boho Knotless">Smedium Boho Knotless - $165.00</option>
+                    <option>----------CORNROWS-----------</option>
+                    <option value = "2 Cornrows">2 Cornrows - $25.00</option>
+                    <option value = "4 Cornrows">4 Cornrows - $45.00</option>
+                    <option value = "6 Cornrows">6 Cornrows - $65.00</option>
+                    <option value = "8 Cornrows">8 Cornrows - $85.00</option>
+                    <option>----------CORNROWS W/ EXTENSION-----------</option>
+                    <option value = "2 Cornrows">2 Cornrows - $45.00</option>
+                    <option value = "4 Cornrows">4 Cornrows - $65.00</option>
+                    <option value = "6 Cornrows">6 Cornrows - $85.00</option>
+                    <option value = "8 Cornrows">8 Cornrows - $105.00</option>
+                    <option>----------PONYTAILS-----------</option>
+                    <option value = "Ponytail">Ponytail - $65.00</option>
+                    <option value = "Braided Ponytail">Braided Ponytail - $75.00</option>
+                    <option>----------ADD-ONS-----------</option>
+                    <option value = "Fulani Braids (Freestyle)">Fulani Braids (Freestyle) - $180.00</option>
+                    <option value = "Cornrow Only Front">Cornrow Only Front - $165.00</option>
+                    <option value = "Side Heart (Add-On)">Side Heart (Add-On) - $20.00</option>
+                    <option>----------BRAIDS & TWISTS (MEN)-----------</option>
+                    <option value = "Large Twists/Braids">Large Twists/Braids - $40.00</option>
+                    <option value = "Medium Twists/Braids">Medium Twists/Braids - $55.00</option>
+                    <option value = "Small Twists/Braids">Small Twists/Braids - $70.00</option>
+                    <option>----------DOUBLE-STRAND TWISTS-----------</option>
+                    <option value = "Large Double-Strand">Large Double-Strand - $80.00</option>
+                    <option value = "Meidum Double-Strand">Meidum Double-Strand - $100.00</option>
                 </select>
 
                 <h4 style = {{marginBottom: "0%"}}>Other Details:</h4>
