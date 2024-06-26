@@ -8,6 +8,7 @@ import Prices from './Prices';
 import { useState, useEffect} from 'react';
 import { Switch, Route } from 'react-router';
 import Nav from './Nav'
+import Policy from './Policy'
 function App() {
 const [availFile, setAvailFile] = useState("")
 // useEffect(()=> {
@@ -50,6 +51,9 @@ useEffect(()=> {
       </Route>
       <Route exact path = "/prices">
         <Prices />
+      </Route>
+      <Route exact path = "/policy">
+      <Policy />
       </Route>
       </Switch>
     </div>

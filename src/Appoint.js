@@ -108,7 +108,7 @@ const urlImage = '/uploads'
             <form onChange={() => setBooly(!booly)} id = "form" ref={formRef}>
             <h2>SCHEDULE YOUR APPOINTMENT</h2>
             <div class = "popup">
-            <p onClick = {myFunction} id = "availability">check my availability</p>
+            <p onClick = {myFunction} id = "availability">click here to check my availability</p>
             <img style = {{width: "200%", height: "600px"}} src = {urlImage} class="popuptext" id="myPopup"></img>
             </div>
             <br></br>
@@ -119,6 +119,7 @@ const urlImage = '/uploads'
                 <select id ="serv">
                     <option></option>
                     <option>----------KNOTLESS BRAIDS-----------</option>
+                    <option value = "Jumbo Knotless">Jumbo Knotless - $100.00</option>
                     <option value = "Large Knotless">Large Knotless - $115.00</option>
                     <option value = "Medium Knotless">Medium Knotless - $140.00</option>
                     <option value = "Smedium Knotless">Smedium Knotless - $165.00</option>
